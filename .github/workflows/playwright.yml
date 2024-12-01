@@ -17,8 +17,8 @@ jobs:
       - name: Checkout Automated Test Cases
         uses: actions/checkout@v4
         with:
-          repository: team-and-tech/milo-tests
-          ref: medical  
+          repository: https://github.com/komalshrivas/PlaywrightLearning.git
+          ref: playwrightLearning  
           token: ${{ secrets.TOKEN }}
       # Checkout the repository
       - name: Checkout Code
