@@ -27,7 +27,7 @@ jobs:
         run: npm install
 
       # Run tests
-      - name: Run Tests
+      - name: tests
         run: npm test
 
       # Optional: Run Linter (if your project uses one)
