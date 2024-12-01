@@ -35,8 +35,8 @@ jobs:
         run: yarn playwright install --with-deps
 
       # Run Playwright tests
-      - name: Run Playwright tests
-        run: npx playwright tests
+      - name: Run Playwright test
+        run: npx playwright test
 
       # Upload Allure results
       - name: Upload Allure results
