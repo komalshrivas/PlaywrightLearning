@@ -1,0 +1,81 @@
+Login Status: 200
+Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhjMDBiZjg1ZmYzNDc0M2VlMDhmYWMiLCJzdGF0dXMiOiJhY3RpdmUiLCJjYWxsZXJJbmZvcm1hdGlvbiI6eyJhZ2VudElkIjoiYWdFMF9iTEd2blM5S2JIemRQQlpRZEFBIiwiY2FsbGVySWQiOiIxMzUyNDg2NzUxOCIsInF1ZXVlSWQiOiIxMjIiLCJwcmVmaXgiOiIxIn0sInBhcnRuZXJJZCI6IjY2OGMwMGJlODVmZjM0NzQzZWUwOGZhOSIsInBhcnRuZXJUeXBlIjoiYjJiIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbiI6W3sibW9kdWxlSWQiOjEsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjIsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjMsImFjY2Vzc0xldmVsSWQiOjB9LHsibW9kdWxlSWQiOjQsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjUsImFjY2Vzc0xldmVsSWQiOjZ9XSwibGVhZFR5cGUiOlt7Il9pZCI6IjY2OGNjOGZjNmQxZTgxNGM0ZjU3ZGI3ZSIsIm5hbWUiOiJTb2NpYWwgU2VjdXJpdHkiLCJzdWJUeXBlIjpbXX0seyJfaWQiOiI2NjhjYzhmYzZkMWU4MTRjNGY1N2RiYTkiLCJuYW1lIjoiVmV0ZXJhbiBEaXNhYmlsaXR5Iiwic3ViVHlwZSI6W119LHsiX2lkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ik1hc3MgVG9ydCIsInN1YlR5cGUiOlt7Il9pZCI6IjY2OGNjOTI0NmQxZTgxNGM0ZjU3ZjUwNCIsIm5hbWUiOiJORUMiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIn0seyJfaWQiOiI2NjhjYzkyNDZkMWU4MTRjNGY1N2Y1NDUiLCJuYW1lIjoiRXhhY3RlY2giLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIn0seyJfaWQiOiI2NjhjYzkyNDZkMWU4MTRjNGY1N2Y1NjEiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ikhlcm5pYSBNZXNoIn0seyJfaWQiOiI2NjhjYzkyNTZkMWU4MTRjNGY1N2Y1N2EiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6IkJhcmQgUG93ZXJQb3J0In0seyJfaWQiOiI2NjhjYzkyNTZkMWU4MTRjNGY1N2Y1ZGIiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ik96ZW1waWMifSx7Il9pZCI6IjY2OGNjOTI1NmQxZTgxNGM0ZjU3ZjY0ZSIsImxlYWRUeXBlSWQiOiI2NjhjYzhmZDZkMWU4MTRjNGY1N2RiZTIiLCJuYW1lIjoiUm91bmR1cCJ9LHsiX2lkIjoiNjY4Y2M5MjY2ZDFlODE0YzRmNTdmNmFmIiwibGVhZFR5cGVJZCI6IjY2OGNjOGZkNmQxZTgxNGM0ZjU3ZGJlMiIsIm5hbWUiOiJQYXJhZ2FyZCJ9LHsiX2lkIjoiNjY4Y2M5MjY2ZDFlODE0YzRmNTdmN2FlIiwibmFtZSI6IlBhcmFxdWF0IiwibGVhZFR5cGVJZCI6IjY2OGNjOGZkNmQxZTgxNGM0ZjU3ZGJlMiJ9XX1dLCJpYXQiOjE3MzE4Mjk1NDIsImV4cCI6MTczMTkxNTk0Mn0.yoV3c16UaBqtAuqvXED3dqv6L8_5KpE2yEZhAEhN2vM
+GET Response Status: 200
+GET Response Data: {
+  message: 'Partner fetch successfully',
+  success: true,
+  data: [
+    { _id: '66d1b143e690cc392ab9344a', name: 'AOA', code: 'AOA' },
+    {
+      _id: '668c00be85ff34743ee08fa9',
+      name: 'B2B Trajector',
+      code: 'b2b-trajector'
+    },
+    {
+      _id: '668c00c885ff34743ee08fd6',
+      name: 'Disability Group Inc',
+      code: 'disability-group-inc'
+    },
+    {
+      _id: '668c00c785ff34743ee08fd0',
+      name: 'Disability Rights Advocates',
+      code: 'disability-rights-advocates'
+    },
+    {
+      _id: '6698bb90959b1a8d62e4857d',
+      name: 'Global Partner Stg',
+      code: 'global-partner-stg'
+    },
+    {
+      _id: '6699e84b5883d34331f47ed6',
+      name: 'Global Partner Stg 2',
+      code: 'global-partner-stg-2'
+    },
+    {
+      _id: '6716756c93e58e3af40443d0',
+      name: 'komal - 2 partner',
+      code: 'komal---2-partner'
+    },
+    {
+      _id: '670e76e5626936ea61ef1dc5',
+      name: 'Komal Partner',
+      code: 'komal-partner'
+    },
+    {
+      _id: '66ff9d5cd6214c2c5aa8aa2c',
+      name: 'ParveenTest',
+      code: 'parveentest'
+    },
+    {
+      _id: '66913a41b6f5ef7860a18655',
+      name: 'Product Team Inc',
+      code: 'product-team-inc'
+    },
+    {
+      _id: '670e7d01c31f8faffc7e5aa6',
+      name: 'Rajpal Hanspal 1',
+      code: 'rajpal-hanspal-1'
+    },
+    {
+      _id: '671514c04be709915b59d628',
+      name: 'Rajpal Hanspal3',
+      code: 'rajpal-hanspal3'
+    },
+    {
+      _id: '67175e2afc8d57de31ff9315',
+      name: 'Rajpal partner 10',
+      code: 'rajpal-partner-10'
+    },
+    {
+      _id: '668c00c385ff34743ee08fbe',
+      name: 'Social Security Administration',
+      code: 'social-security-administration'
+    },
+    { _id: '672f15892ce56a7c097c101a', name: 'TestP', code: 'testp' },
+    {
+      _id: '668c00c585ff34743ee08fca',
+      name: 'Workers Compensation Boards',
+      code: 'workers-compensation-boards'
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+GET Preview Response Status: 200
+Previewing first 3 items of the response: [
+  { _id: '66d1b143e690cc392ab9344a', name: 'AOA', code: 'AOA' },
+  {
+    _id: '668c00be85ff34743ee08fa9',
+    name: 'B2B Trajector',
+    code: 'b2b-trajector'
+  },
+  {
+    _id: '668c00c885ff34743ee08fd6',
+    name: 'Disability Group Inc',
+    code: 'disability-group-inc'
+  }
+]
+Full Response Data for Preview: {
+  message: 'Partner fetch successfully',
+  success: true,
+  data: [
+    { _id: '66d1b143e690cc392ab9344a', name: 'AOA', code: 'AOA' },
+    {
+      _id: '668c00be85ff34743ee08fa9',
+      name: 'B2B Trajector',
+      code: 'b2b-trajector'
+    },
+    {
+      _id: '668c00c885ff34743ee08fd6',
+      name: 'Disability Group Inc',
+      code: 'disability-group-inc'
+    },
+    {
+      _id: '668c00c785ff34743ee08fd0',
+      name: 'Disability Rights Advocates',
+      code: 'disability-rights-advocates'
+    },
+    {
+      _id: '6698bb90959b1a8d62e4857d',
+      name: 'Global Partner Stg',
+      code: 'global-partner-stg'
+    },
+    {
+      _id: '6699e84b5883d34331f47ed6',
+      name: 'Global Partner Stg 2',
+      code: 'global-partner-stg-2'
+    },
+    {
+      _id: '6716756c93e58e3af40443d0',
+      name: 'komal - 2 partner',
+      code: 'komal---2-partner'
+    },
+    {
+      _id: '670e76e5626936ea61ef1dc5',
+      name: 'Komal Partner',
+      code: 'komal-partner'
+    },
+    {
+      _id: '66ff9d5cd6214c2c5aa8aa2c',
+      name: 'ParveenTest',
+      code: 'parveentest'
+    },
+    {
+      _id: '66913a41b6f5ef7860a18655',
+      name: 'Product Team Inc',
+      code: 'product-team-inc'
+    },
+    {
+      _id: '670e7d01c31f8faffc7e5aa6',
+      name: 'Rajpal Hanspal 1',
+      code: 'rajpal-hanspal-1'
+    },
+    {
+      _id: '671514c04be709915b59d628',
+      name: 'Rajpal Hanspal3',
+      code: 'rajpal-hanspal3'
+    },
+    {
+      _id: '67175e2afc8d57de31ff9315',
+      name: 'Rajpal partner 10',
+      code: 'rajpal-partner-10'
+    },
+    {
+      _id: '668c00c385ff34743ee08fbe',
+      name: 'Social Security Administration',
+      code: 'social-security-administration'
+    },
+    { _id: '672f15892ce56a7c097c101a', name: 'TestP', code: 'testp' },
+    {
+      _id: '668c00c585ff34743ee08fca',
+      name: 'Workers Compensation Boards',
+      code: 'workers-compensation-boards'
+    }
+  ]
+}

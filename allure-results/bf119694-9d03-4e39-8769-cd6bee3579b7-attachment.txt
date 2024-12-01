@@ -1,0 +1,39 @@
+Login Status: 200
+Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhjMDBiZjg1ZmYzNDc0M2VlMDhmYWMiLCJzdGF0dXMiOiJhY3RpdmUiLCJjYWxsZXJJbmZvcm1hdGlvbiI6eyJhZ2VudElkIjoiYWdFMF9iTEd2blM5S2JIemRQQlpRZEFBIiwiY2FsbGVySWQiOiIxMzUyNDg2NzUxOCIsInF1ZXVlSWQiOiIxMjIiLCJwcmVmaXgiOiIxIn0sInBhcnRuZXJJZCI6IjY2OGMwMGJlODVmZjM0NzQzZWUwOGZhOSIsInBhcnRuZXJUeXBlIjoiYjJiIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbiI6W3sibW9kdWxlSWQiOjEsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjIsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjMsImFjY2Vzc0xldmVsSWQiOjB9LHsibW9kdWxlSWQiOjQsImFjY2Vzc0xldmVsSWQiOjZ9LHsibW9kdWxlSWQiOjUsImFjY2Vzc0xldmVsSWQiOjZ9XSwibGVhZFR5cGUiOlt7Il9pZCI6IjY2OGNjOGZjNmQxZTgxNGM0ZjU3ZGI3ZSIsIm5hbWUiOiJTb2NpYWwgU2VjdXJpdHkiLCJzdWJUeXBlIjpbXX0seyJfaWQiOiI2NjhjYzhmYzZkMWU4MTRjNGY1N2RiYTkiLCJuYW1lIjoiVmV0ZXJhbiBEaXNhYmlsaXR5Iiwic3ViVHlwZSI6W119LHsiX2lkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ik1hc3MgVG9ydCIsInN1YlR5cGUiOlt7Il9pZCI6IjY2OGNjOTI0NmQxZTgxNGM0ZjU3ZjUwNCIsIm5hbWUiOiJORUMiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIn0seyJfaWQiOiI2NjhjYzkyNDZkMWU4MTRjNGY1N2Y1NDUiLCJuYW1lIjoiRXhhY3RlY2giLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIn0seyJfaWQiOiI2NjhjYzkyNDZkMWU4MTRjNGY1N2Y1NjEiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ikhlcm5pYSBNZXNoIn0seyJfaWQiOiI2NjhjYzkyNTZkMWU4MTRjNGY1N2Y1N2EiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6IkJhcmQgUG93ZXJQb3J0In0seyJfaWQiOiI2NjhjYzkyNTZkMWU4MTRjNGY1N2Y1ZGIiLCJsZWFkVHlwZUlkIjoiNjY4Y2M4ZmQ2ZDFlODE0YzRmNTdkYmUyIiwibmFtZSI6Ik96ZW1waWMifSx7Il9pZCI6IjY2OGNjOTI1NmQxZTgxNGM0ZjU3ZjY0ZSIsImxlYWRUeXBlSWQiOiI2NjhjYzhmZDZkMWU4MTRjNGY1N2RiZTIiLCJuYW1lIjoiUm91bmR1cCJ9LHsiX2lkIjoiNjY4Y2M5MjY2ZDFlODE0YzRmNTdmNmFmIiwibGVhZFR5cGVJZCI6IjY2OGNjOGZkNmQxZTgxNGM0ZjU3ZGJlMiIsIm5hbWUiOiJQYXJhZ2FyZCJ9LHsiX2lkIjoiNjY4Y2M5MjY2ZDFlODE0YzRmNTdmN2FlIiwibmFtZSI6IlBhcmFxdWF0IiwibGVhZFR5cGVJZCI6IjY2OGNjOGZkNmQxZTgxNGM0ZjU3ZGJlMiJ9XX1dLCJpYXQiOjE3MzE4MjgzNjQsImV4cCI6MTczMTkxNDc2NH0.uL6fV2gvCKn5VQR7DQOjsHI85qGKk55RMo77piMSNrE
+GET Leads Status: 200
+GET Lead Data: {
+  message: 'Leads fetch successfully',
+  statusCode: 200,
+  success: true,
+  data: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    totalCount: 533,
+    totalPages: 54,
+    currentPage: 1,
+    limit: 10
+  }
+}
+GET Lead API Data: {
+  message: 'Leads fetch successfully',
+  statusCode: 200,
+  success: true,
+  data: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    totalCount: 533,
+    totalPages: 54,
+    currentPage: 1,
+    limit: 10
+  }
+}
