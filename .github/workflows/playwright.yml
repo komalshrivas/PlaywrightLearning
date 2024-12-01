@@ -1,4 +1,4 @@
-name: CI Workflow
+name: Run Regression Automated test cases for B2B Projects
 
 # Trigger the workflow on pushes to any branch
 on:
@@ -10,25 +10,52 @@ jobs:
   build:
     name: Run CI Steps
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
+      - name: Checkout Automated Test Cases
+        uses: actions/checkout@v4
+        with:
+          repository: team-and-tech/milo-tests
+          ref: medical  
+          token: ${{ secrets.TOKEN }}
       # Checkout the repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
       # Set up Node.js (modify the version as needed)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
-
-      # Install dependencies
-      - name: Install Dependencies
+          node-version: 18
+      
+      - name: Install dependencies
         run: npm install
 
-      # Run tests
-      - name: tests
-        run: npm test
+      - name: Install libraries
+        run: npm install @faker-js/faker crypto-js playwright-msteams-reporter
+      
+      - name: Install Playwright Browsers
+        run: yarn playwright install --with-deps
+      
+      - name: Run Playwright tests
+        run: npx playwright test tests/stg_regressionTests
+      
+      - uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: allure-results/
+          retention-days: 30
+      
+      - name: Get Allure history
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+        
 
       # Optional: Run Linter (if your project uses one)
       - name: Run Linter
