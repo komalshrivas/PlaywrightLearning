@@ -60,7 +60,7 @@ test('@API: Add user under admin role', async ({ page }) => {
    await page.getByTestId('input-email').fill(email);
    await page.locator('.css-19bb58m').click();
    await page.getByRole('option', { name: 'Mass Tort - Exactech' }).click();
-   await page.pause();
+   
 //    await page.locator('form').click();
 });
 

@@ -1,2 +1,0 @@
-Login Status: 200
-Access Token: undefined

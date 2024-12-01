@@ -1,0 +1,14 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://b2b-platform.qa.trajector-tech.com",
+      "localStorage": [
+        {
+          "name": "i18nextLng",
+          "value": "en-US"
+        }
+      ]
+    }
+  ]
+}

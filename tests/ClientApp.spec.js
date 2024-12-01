@@ -20,11 +20,11 @@ test('@Web Client App login', async ({ page }) => {
     await page.getByTestId('input-email').click();
     await page.getByTestId('input-email').fill('admin.trajectorservices@yopmail.com');
     await page.getByTestId('password-input-password').click();
-    await page.getByTestId('password-input-password').fill('password');
+    await page.getByTestId('password-input-password').fill('Password@1');
     await page.getByTestId('Sign in-button').click();
     await page.getByTestId('Screeners-header-action').click();
     await page.getByTestId('Add New Intake Screener-button').click();
-    console.log(titles); 
+    
     
 
  });
