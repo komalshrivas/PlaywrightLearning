@@ -32,7 +32,7 @@ test('@Web ScreenShot', async({page}) => {
     await page.screenshot({path: 'Screenshot.png'});
 })
 
-test.only('Vishual TestingScreenShot', async({page}) => {
+test('Vishual TestingScreenShot', async({page}) => {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
    expect(await page.screenshot()).toMatchSnapshot('landing page.png');
     
