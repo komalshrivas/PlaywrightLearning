@@ -1,6 +1,6 @@
 name: Run Regression Automated test cases for B2B Projects
 
-# Trigger the workflow on pushes to any branch
+# Trigger the workflow on pushes to the master branch
 on:
   push:
     branches:
@@ -10,17 +10,9 @@ jobs:
   build:
     name: Run CI Steps
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout Automated Test Cases
-        uses: actions/checkout@v4
-        with:
-          repository: https://github.com/komalshrivas/PlaywrightLearning.git
-          ref: playwrightLearning  
-          token: ${{ secrets.TOKEN }}
-      # Checkout the repository
+      # Checkout the main repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -29,25 +21,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-      
+
+      # Install dependencies
       - name: Install dependencies
         run: npm install
 
+      # Install required libraries
       - name: Install libraries
         run: npm install @faker-js/faker crypto-js playwright-msteams-reporter
-      
+
+      # Install Playwright Browsers
       - name: Install Playwright Browsers
         run: yarn playwright install --with-deps
-      
+
+      # Run Playwright tests
       - name: Run Playwright tests
         run: npx playwright test tests/stg_regressionTests
-      
-      - uses: actions/upload-artifact@v4
+
+      # Upload Allure results
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results/
           retention-days: 30
-      
+
+      # Checkout Allure history (if needed)
       - name: Get Allure history
         uses: actions/checkout@v4
         if: always()
@@ -55,7 +54,6 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-        
 
       # Optional: Run Linter (if your project uses one)
       - name: Run Linter
