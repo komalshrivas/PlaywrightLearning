@@ -41,12 +41,10 @@ test('@API  Navigate to the website and login & logout the application', async (
     await page.getByTestId('No-button').click();  
 });
 test('@API: Add user under admin role', async ({ page }) => {
-   
     const firstName  =  faker.person.firstName();
     const lastName  =  faker.person.lastName();
     const email = faker.internet.email();
     const phone = faker.phone.number('(###) ###-####');
-    
    await page.getByRole('button', { name: 'profile' }).click();
    await page.getByRole('menuitem', { name: 'Manage Users' }).click();
    await page.getByTestId('Add New User-button').click();
@@ -60,8 +58,6 @@ test('@API: Add user under admin role', async ({ page }) => {
    await page.getByTestId('input-email').fill(email);
    await page.locator('.css-19bb58m').click();
    await page.getByRole('option', { name: 'Mass Tort - Exactech' }).click();
-   
-//    await page.locator('form').click();
 });
 
 

@@ -24,7 +24,4 @@ test('@Web Client App login', async ({ page }) => {
     await page.getByTestId('Sign in-button').click();
     await page.getByTestId('Screeners-header-action').click();
     await page.getByTestId('Add New Intake Screener-button').click();
-    
-    
-
  });
