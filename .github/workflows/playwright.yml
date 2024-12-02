@@ -16,7 +16,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Set up Node.js (modify the version as needed)
+      # Set up Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -28,32 +28,34 @@ jobs:
 
       # Install required libraries
       - name: Install libraries
-        run: npm install @faker-js/faker crypto-js playwright-msteams-reporter
+        run: npm install @faker-js/faker crypto-js playwright-msteams-reporter allure-playwright --save-dev
 
       # Install Playwright Browsers
       - name: Install Playwright Browsers
-        run: yarn playwright install --with-deps
+        run: npx playwright install --with-deps
 
-      # Run Playwright tests
-      - name: Run Playwright test
-        run: npx playwright test
+      # Run Playwright tests with Allure reporter
+      - name: Run Playwright tests
+        run: npx playwright test --reporter=allure-playwright
 
-      # Upload Allure results
+      # Generate Allure Report
+      - name: Generate Allure Report
+        run: npx allure generate allure-results --clean -o allure-report
+
+      # Deploy Allure Report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+
+      # Upload Allure Results (Optional: For debugging or storing raw results)
       - name: Upload Allure results
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results/
           retention-days: 30
-
-      # Checkout Allure history (if needed)
-      - name: Get Allure history
-        uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
 
       # Optional: Run Linter (if your project uses one)
       - name: Run Linter
