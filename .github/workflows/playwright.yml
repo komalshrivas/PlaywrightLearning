@@ -1,4 +1,4 @@
-name: Run Regression Automated test cases for B2B Projects
+name: Run Regression Automated Test Cases for B2B Projects
 
 # Trigger the workflow on pushes to the master branch
 on:
@@ -12,52 +12,52 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the main repository
+      # Step 1: Checkout the main repository
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Set up Node.js
-      - name: Setup Node
+      # Step 2: Set up Node.js (modify version if needed)
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # Install dependencies
-      - name: Install dependencies
+      # Step 3: Install project dependencies
+      - name: Install Dependencies
         run: npm install
 
-      # Install required libraries
-      - name: Install libraries
+      # Step 4: Install required libraries for Playwright and Allure
+      - name: Install Libraries
         run: npm install @faker-js/faker crypto-js playwright-msteams-reporter allure-playwright --save-dev
 
-      # Install Playwright Browsers
+      # Step 5: Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # Run Playwright tests with Allure reporter
-      - name: Run Playwright tests
+      # Step 6: Run Playwright tests with Allure reporter
+      - name: Run Playwright Tests
         run: npx playwright test --headless --reporter=allure-playwright
 
-      # Generate Allure Report
+      # Step 7: Generate the Allure report
       - name: Generate Allure Report
         run: npx allure generate allure-results --clean -o allure-report
 
-      # Deploy Allure Report to GitHub Pages
+      # Step 8: Deploy the Allure report to GitHub Pages
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
 
-      # Upload Allure Results (Optional: For debugging or storing raw results)
-      - name: Upload Allure results
+      # Step 9: Upload raw Allure results (Optional)
+      - name: Upload Allure Results
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results/
           retention-days: 30
 
-      # Optional: Run Linter (if your project uses one)
+      # Step 10: Optional - Run Linter (if applicable)
       - name: Run Linter
         run: npm run lint
-        continue-on-error: true  # Optional: Don't fail the workflow on lint errors
+        continue-on-error: true  # Don't fail the workflow on lint errors
