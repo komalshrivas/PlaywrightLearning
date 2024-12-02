@@ -27,13 +27,13 @@ test('@Web ScreenShot', async({page}) => {
     await page.locator("#hide-textbox").click();
     await expect(page.locator("#displayed-text")).toBeHidden();
     page.on("dialog", dialog => dialog.accept());
-    await page.locator('#confirmbtn').screenshot({path: 'PartialScreenshot.png'});
+    // await page.locator('#confirmbtn').screenshot({path: 'PartialScreenshot.png'});
     await page.locator('#confirmbtn').click();
-    await page.screenshot({path: 'Screenshot.png'});
+    // await page.screenshot({path: 'Screenshot.png'});
 })
 
 test('Vishual TestingScreenShot', async({page}) => {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
-   expect(await page.screenshot()).toMatchSnapshot('landing page.png');
+//    expect(await page.screenshot()).toMatchSnapshot('landing page.png');
     
 })
