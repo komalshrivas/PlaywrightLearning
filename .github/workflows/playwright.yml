@@ -1,19 +1,20 @@
 name: Run Regression Automated Test Cases for B2B Projects
 
-# Trigger the workflow on pushes to the master branch
 on:
-  workflow_dispatch: # Allows manual triggering
-  push: # Automatic trigger when code is pushed to specified branches
-    branches:
-      - main
-      - master
-  pull_request: # Trigger on pull requests to specific branches
-    branches:
-      - main
-      - master
-  schedule: # Schedule automatic runs (e.g., daily)
-    - cron: '0 3 * * *' # Runs at 11:00 AM IST daily //  //
-
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to run the tests on'
+        required: true
+        default: 'master'
+      environment:
+        description: 'Choose environment'
+        required: true
+        type: choice # Explicitly set type to 'choice'
+        options:
+          - staging
+          - production
+          - testing
 jobs:
   build:
     name: Run CI Steps
@@ -23,44 +24,60 @@ jobs:
       # Step 1: Checkout the main repository
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
 
-      # Step 2: Set up Node.js (modify version if needed)
+      # Step 2: Verify branch existence
+      - name: Verify Branch
+        run: |
+          if ! git ls-remote --exit-code --heads origin ${{ inputs.branch }}; then
+            echo "Branch '${{ inputs.branch }}' does not exist!"
+            exit 1
+          fi
+
+      # Step 3: Set up environment
+      - name: Set up Environment
+        run: echo "Setting up environment for ${{ inputs.environment }}"
+
+      # Step 4: Run tasks
+      - name: Run Tasks
+        run: |
+          echo "Running tasks on branch: ${{ inputs.branch }}"
+          echo "Target environment: ${{ inputs.environment }}"
+
+      # Step 5: Set up Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      # Step 3: Install project dependencies
+      # Step 6: Install project dependencies
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Install required libraries for Playwright and Allure
+      # Step 7: Install required libraries for Playwright and Allure
       - name: Install Libraries
         run: npm install @faker-js/faker crypto-js playwright-msteams-reporter allure-playwright --save-dev
 
-      # Step 5: Install Playwright browsers
+      # Step 8: Install Playwright browsers
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      # Step 6: Run Playwright tests with Allure reporter
+      # Step 9: Run Playwright tests with Allure reporter
       - name: Run Playwright Tests
         run: npx playwright test --reporter=allure-playwright
 
-       # Install Allure Commandline
+      # Step 10: Install Allure Commandline
       - name: Install Allure Commandline
         run: npm install allure-commandline --save-dev
 
-      # Step 7: Generate the Allure report
+      # Step 11: Generate the Allure report
       - name: Generate Allure Report
         run: npx allure generate allure-results --clean -o allure-report
-      # Step 8: Deploy the Allure report to GitHub Pages
-       # Deploy Allure Report
+
+      # Step 12: Deploy the Allure report to GitHub Pages
       - name: Deploy Allure Report
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./allure-report
-
-          
-    
-      
