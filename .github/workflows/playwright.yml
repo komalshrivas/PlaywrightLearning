@@ -56,7 +56,7 @@ jobs:
         run: npm install
 
       # Step 7: Install required libraries for Playwright and Allure
-      - name: Install Libraries
+      - name: Install Libraries//
         run: npm install @faker-js/faker crypto-js playwright-msteams-reporter allure-playwright --save-dev
 
       # Step 8: Install Playwright browsers
