@@ -43,8 +43,8 @@ jobs:
         run: npx playwright install --with-deps
 
         # Step 6: Replace with the command to run your test suite
-      - name: Run Tiger Automation Suite
-        run: npm run tiger-automation
+      - name: Run Playwright Tests
+        run: npx playwright test
 
       # Step 6: Run Playwright tests with Allure reporter
       - name: Run Playwright Tests
