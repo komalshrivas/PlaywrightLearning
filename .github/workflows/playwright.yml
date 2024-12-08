@@ -1,4 +1,4 @@
-name: Run Regression Automated Test Cases for B2B Projects
+name: Run Regression Automated Test Cases for B2B Projects //
 
 # Enable automatic and manual triggers
 on:
