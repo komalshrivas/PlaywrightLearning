@@ -15,7 +15,6 @@ Given('Go to the website and login with valid creds', async function () {
   await page.getByTestId('input-email').fill('admin.trajectorservices@yopmail.com');
   await page.getByTestId('password-input-password').fill('Password@1');
   await page.getByTestId('Sign in-button').click();
-
   // Wait for navigation after login
   await page.waitForLoadState('networkidle');
 });
@@ -35,5 +34,8 @@ Then('Click on the profile link at the right side top of the page and click on t
   await page.getByRole('menuitem', { name: 'Log Out' }).click();
   await page.waitForSelector('[data-testid="Yes-button"]', { state: 'visible', timeout: 10000 });
   await page.getByTestId('Yes-button').click();
+  //=====================
+
+
 });
 
