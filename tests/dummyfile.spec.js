@@ -10,3 +10,5 @@
 // "WebTests": "npx playwright test --grep @Web",
 // "API Test": "npz playwright test --grep @API"
 //npx cucumber-js
+//git commit -m "modified update secretsin YML"  
+//git push -u origin master   
