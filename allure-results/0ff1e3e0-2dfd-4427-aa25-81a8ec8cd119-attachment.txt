@@ -1,0 +1,5 @@
+Login successful, on dashboard.
+LocalStorage and SessionStorage captured.
+Storage state (cookies + localStorage) saved successfully!
+Navigated to the dashboard with localStorage and sessionStorage restored.
+Clicked on Partners header.
