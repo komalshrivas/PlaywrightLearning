@@ -8,8 +8,7 @@ test('@Web Client App login', async ({ page }) => {
     await page.getByRole('button',{name:"Login"}).click();
     await page.waitForLoadState('networkidle');
     await page.locator(".card-body b").first().waitFor();
-    await page.locator(".card-body").filter({hasText:"IPHONE 13 PRO"})
-    .getByRole("button",{name:"Add to Cart"}).click();
+    await page.locator(".card-body").filter({hasText:"IPHONE 13 PRO"}).getByRole("button",{name:"Add to Cart"}).click();
     await page.getByRole("listitem").getByRole('button',{name:"Cart"}).click();
     await page.locator("div li").first().waitFor();
     await expect(page.getByText("IPHONE 13 PRO")).toBeVisible();

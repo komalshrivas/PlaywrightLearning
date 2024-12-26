@@ -28,7 +28,7 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
      
-       headless: true,
+       headless: false,
        screenshot : "on",
        video: "retain-on-failure",
        trace: "retain-on-failure",
@@ -39,20 +39,20 @@ module.exports = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
+    // {
       
-       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+    //    name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
       
       
       
-    },
+    // },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
       
-    },
+    // },
 
     // {
     //   name: 'webkit',
